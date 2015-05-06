@@ -13,9 +13,10 @@ define([
         },
         render: function() {
             this.$el.html(template);
-            $('#sendButton').on('click',function(event)
+            jQuery('#sendButton').on('click',function(event)
             {
-                $('#result').html("You sent '"+ $('#messageText').val() + "' to this view");
+               console.log('cliked button');
+                jQuery('#result').html("You sent '"+ jQuery('#messageText').val() + "' to this view");
             });
         }
     });
