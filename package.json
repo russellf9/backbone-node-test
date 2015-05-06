@@ -1,0 +1,30 @@
+{
+  "name": "backbone-node-test",
+  "version": "0.0.1",
+  "description": "A FED test",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/russellf9/backbone-node-test.git"
+  },
+  "keywords": [
+    "Test",
+    "FED",
+    "Backbone"
+  ],
+  "author": "russell@factornine.co.uk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/russellf9/backbone-node-test/issues"
+  },
+  "homepage": "https://github.com/russellf9/backbone-node-test",
+  "devDependencies": {
+    "body-parser": "^1.12.3",
+    "node-static": "^0.7.6",
+    "node-uuid": "^1.4.3"
+  }
+}

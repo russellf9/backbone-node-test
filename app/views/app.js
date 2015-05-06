@@ -15,7 +15,8 @@ define([
 
             var that = this;
 
-            $(this.el).html(layoutTemplate);
+            // fixed bug here
+            this.$el.html(layoutTemplate);
 
         }
     });
