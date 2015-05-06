@@ -14,11 +14,14 @@ define([
             // need the `inputNumber`
             var divisor =  $('#inputNumber').val();
 
-            return dividend / divisor;
+            if (!isNaN(parseFloat(divisor)) && isFinite(divisor) && parseFloat(divisor)!==0 ) {
+                return dividend / divisor;
+            }
+            // just pass an error back for now...
+            return ' an invalid value';
         },
 
         renderResults: function () {
-            console.log('calculate::renderResults');
         	$('#result').html('The answer is ' + this.calculate(this.dividend));
         },
 
@@ -30,5 +33,8 @@ define([
         }
     });
 
+
+
     return CalculateView;
 });
+
