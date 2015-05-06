@@ -2,17 +2,20 @@ define([
     'jquery',
     'lodash',
     'backbone',
-    'text!templates/modules/sendMessage.htm'
-], function(_, Backbone, $, template) {
+    'vm',
+    'events',
+    'text!templates/modules/sendMessage.html'
+], function(_, $, Backbone, Vm, Events, template) {
     var SendMessageView = Backbone.View.extend({
         el: '.content',
-                
-        render: function() {
 
-            $(this.el).html(template);
-            $('#sendButton').on('click',function(event) 
+        initialize: function() {
+        },
+        render: function() {
+            this.$el.html(template);
+            $('#sendButton').on('click',function(event)
             {
-                $('#result').html("You sent '"+ $('#messageText').val() + "' to this view"):
+                $('#result').html("You sent '"+ $('#messageText').val() + "' to this view");
             });
         }
     });
